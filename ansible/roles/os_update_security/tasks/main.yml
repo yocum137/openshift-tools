@@ -2,7 +2,7 @@
 - name: Make room for new kernel on /boot
   command: /usr/bin/package-cleanup --oldkernels --count=2 -y
 
-- name: Yum update packages for security issues, only
+- name: Yum update packages for security issues only
   yum:
     name:  "{{ oul_package_names }}"
     exclude: "{{ oul_exclude }}"
